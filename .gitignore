@@ -1,1 +1,3 @@
 .vs
+src/comic-book/bin/*
+src/comic-book/obj/*
