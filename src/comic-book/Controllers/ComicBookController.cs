@@ -8,7 +8,12 @@ namespace comic_book.Controllers
 {
     public class ComicBookController : Controller
     {
-        public ContentResult Detail(){
+        public ActionResult Detail(){
+            // Check if day of the week is monday for specials, redirect to specials page
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Monday){
+                return new RedirectResult("/");
+            }
+
             return new ContentResult()
             {
                 Content = "Hello world"
