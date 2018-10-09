@@ -10,11 +10,11 @@ namespace comic_book.Controllers
     {
         public ActionResult Detail(){
             // Check if day of the week is monday for specials, redirect to specials page
-            if (DateTime.Today.DayOfWeek == DayOfWeek.Monday){
+            if (DateTime.Today.DayOfWeek == DayOfWeek.Wednesday){
                 return Redirect("/");
             }
 
-            return Content("Details page");
+            return View();
         }
     }
 }
